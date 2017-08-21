@@ -1,0 +1,4 @@
+build/
+problems/
+*.swp
+*.pyc
