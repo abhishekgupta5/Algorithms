@@ -6,8 +6,9 @@ def sieve(n):
     lis = [True for i in range(n+1)]
 
     max_num = ceil(sqrt(n))
-    j = 2
-    for i in range(2,max_num):
+
+    for i in range(2,max_num+1):
+        j = 2
         if (lis[i] == 1):
             while(i*j<=n):
                 lis[i*j] = 0
