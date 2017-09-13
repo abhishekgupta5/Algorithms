@@ -23,7 +23,15 @@ def selection_sort(lis):
     return lis
 
 def insertion_sort(lis):
-    
+    for i in range(len(lis)):
+        item = lis[i]
+        j = i
+        while j > 0 and lis[j-1] > item:
+            lis[j] = lis[j-1]
+            j -= 1
+        lis[j] = item
+    return lis
+
 
 if __name__ == '__main__':
     lis = generate_list(100)
@@ -32,7 +40,7 @@ if __name__ == '__main__':
     print("\n")
     #lis = selection_sort(lis)
     #lis = bubble_sort(lis)
-    #lis = insertion_sort(lis)
+    lis = insertion_sort(lis)
     print("Sorted list: ", lis)
     print("\n")
 
