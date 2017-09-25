@@ -8,7 +8,6 @@ def quicksort(arr):
         pivot = arr.pop(randrange(size))
         lesser = quicksort([x for x in arr if x < pivot])
         greater = quicksort([x for x in arr if x >= pivot])
-        #print(lesser + [pivot] + greater)
         return lesser + [pivot] + greater
 
 if __name__ == '__main__':
